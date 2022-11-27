@@ -17,5 +17,4 @@ Dugum::Dugum(int veri)
 {
     this->veri = veri;
     sonraki_d = 0;
-    //onceki_d = 0;
 }

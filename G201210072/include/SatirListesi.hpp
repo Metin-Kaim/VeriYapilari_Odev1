@@ -34,6 +34,5 @@ private:
     Dugum *ilk_sl;
     void boslukBirakSirali(int);
     Dugum *dugumAdresi;
-    // int gec_satirListesiDugumSayisi;
 };
 #endif

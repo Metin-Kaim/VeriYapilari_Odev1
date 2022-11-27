@@ -23,6 +23,5 @@ public:
     int veri;
 
     Dugum *sonraki_d;
-   //Dugum *onceki_d;
 };
 #endif

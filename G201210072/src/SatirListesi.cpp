@@ -21,7 +21,6 @@ SatirListesi::SatirListesi()
     dugumAdresi = 0;
     dugumSecme = false;
     randomSayi = 0;
-    // gec_satirListesiDugumSayisi = 0;
 }
 
 SatirListesi::~SatirListesi()
@@ -58,7 +57,7 @@ void SatirListesi::d_ekle(int veri)
 void SatirListesi::d_yazdir(int sira) // satir listesinin dugumlerini yazdirma
 {
     Dugum *gecici = ilk_sl;
-    // _satirListesiDugumSayisi = 0;
+    
     while (gecici != 0)
     {
         boslukBirakSirali(sira);
@@ -88,9 +87,7 @@ void SatirListesi::d_yazdir(int sira) // satir listesinin dugumlerini yazdirma
 
         gecici = gecici->sonraki_d;
 
-        // _satirListesiDugumSayisi++; // listedeki dugum sayisini verecek
     }
-    // gec_satirListesiDugumSayisi = _satirListesiDugumSayisi;
 }
 
 float SatirListesi::ortalamaGetir()
@@ -122,8 +119,7 @@ void SatirListesi::rastgeleDugumGetir()
 {
     dugumSecme = true;
     randomSayi = rand() % dugumSayisiGetir();
-    // cout << satirListesiDugumSayisi << "   " << randomSayi << endl
-        //  << endl;
+
     Dugum *gec = ilk_sl;
     for (int i = 0; i < randomSayi; i++)
     {
@@ -168,6 +164,6 @@ int SatirListesi::dugumSayisiGetir()
         gec = gec->sonraki_d;
         satirListesiDugumSayisi++;
     }
-    // cout<<satirListesiDugumSayisi<<endl;
+    
     return satirListesiDugumSayisi;
 }

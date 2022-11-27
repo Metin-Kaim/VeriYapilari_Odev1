@@ -72,7 +72,6 @@ int main()
                 ++diziDolasimi;
                 sayilar[diziDolasimi] = stoi(satir.substr(sayiBaslangic, i - sayiBaslangic));
                 sayiBaslangic = i + 1;
-                // cout << sayilar[diziDolasimi] << " ";
             }
             else if (islem != " ")
             {
@@ -81,17 +80,18 @@ int main()
                     ++diziDolasimi;
                     sayilar[diziDolasimi] = stoi(satir.substr(sayiBaslangic, i - sayiBaslangic + 1));
                     sayiBaslangic = i + 1;
-                    // cout << sayilar[diziDolasimi] << " ";
                 }
             }
         }
         y->ekle(sayilar, sayiAdedi);
     }
-    
+    dosya.close();
+
     int kacinciKume = 0;
     int seciliDugum = 0;
     int k_sayac = 0;
     int sonSatirdakiDugumSayisi = satirSayisi % 8; // son satirda kac adet dugum oldugunu bulma
+    
     system("cls");
     y->yazdir_Yonetici(seciliDugum, kacinciKume, (kacinciKume * 8) + seciliDugum);
 
@@ -198,7 +198,7 @@ int main()
                 k_sayac = 0;
             }
         }
-        else if(tercih=="111")//uygulamadan cikis kodu
+        else if(tercih=="111")//uygulamadan cikis yapmak için özel kod
         {
             return 0;
         }
@@ -218,5 +218,5 @@ int main()
             k_sayac = 0;
         }
     }
-    dosya.close();
+    
 }
