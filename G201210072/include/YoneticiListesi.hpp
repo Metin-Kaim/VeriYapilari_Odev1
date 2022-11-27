@@ -1,11 +1,13 @@
 /*
- * @file SatirListesi.hpp
- * @description İki yönlü bağıl liste oluşturma ve Veri.txt dosyasında yer alan verileri dizi formatında listeye ekleme veya listeden çıkarma.
- * @course 2. Öğretim C grubu
- * @assignment 1. Ödev
- * @date 10.11.2021
- * @author Metin Kaim -- metin.kaim@ogr.sakarya.edu.tr
- */
+* @file             YoneticiListesi.hpp
+* @description      Verilen "veriler.txt" dosyasındaki verileri bağlı liste yapısıyla tutup,
+                    o bağlı listeyi de çift yönlü başka bir bağlı liste ile kontrol ederek
+                    istenen işlemleri yerine getirme. 
+* @course           1. Öğretim A grubu
+* @assignment       1. Ödev
+* @date             21.11.2022
+* @author           Metin Kaim -- metin.kaim@ogr.sakarya.edu.tr
+*/
 
 #ifndef YoneticiListesi_hpp
 #define YoneticiListesi_hpp

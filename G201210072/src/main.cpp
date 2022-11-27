@@ -1,11 +1,13 @@
 /*
- * @file main.cpp
- * @description İki yönlü bağıl liste oluşturma ve Veri.txt dosyasında yer alan verileri dizi formatında listeye ekleme veya listeden çıkarma.
- * @course 2. Öğretim C grubu
- * @assignment 1. Ödev
- * @date 10.11.2021
- * @author Metin Kaim -- metin.kaim@ogr.sakarya.edu.tr
- */
+* @file             main.cpp
+* @description      Verilen "veriler.txt" dosyasındaki verileri bağlı liste yapısıyla tutup,
+                    o bağlı listeyi de çift yönlü başka bir bağlı liste ile kontrol ederek
+                    istenen işlemleri yerine getirme. 
+* @course           1. Öğretim A grubu
+* @assignment       1. Ödev
+* @date             21.11.2022
+* @author           Metin Kaim -- metin.kaim@ogr.sakarya.edu.tr
+*/
 
 #include <iostream>
 #include <iomanip>
@@ -38,7 +40,7 @@ int main()
 
         if (satir == "") // Satirin boş olup olmadigini kontrol eden yapi.
         {
-            break;
+            continue;
         }
         satirSayisi++;
         for (int i = 0; i < satir.length(); i++) // bir satirda kac adet sayi oldugunu hesaplama
@@ -77,7 +79,7 @@ int main()
                 if (i == (satir.length()) - 1) // satir sonu
                 {
                     ++diziDolasimi;
-                    sayilar[diziDolasimi] = stoi(satir.substr(sayiBaslangic, i - sayiBaslangic + 1)); // 3 haneli olmasina dikkat et!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                    sayilar[diziDolasimi] = stoi(satir.substr(sayiBaslangic, i - sayiBaslangic + 1));
                     sayiBaslangic = i + 1;
                     // cout << sayilar[diziDolasimi] << " ";
                 }
@@ -85,6 +87,7 @@ int main()
         }
         y->ekle(sayilar, sayiAdedi);
     }
+    
     int kacinciKume = 0;
     int seciliDugum = 0;
     int k_sayac = 0;
