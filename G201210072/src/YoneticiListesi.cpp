@@ -104,7 +104,7 @@ void YoneticiListesi::yazdir_Yonetici(int tercih, int kacinciKume, int sira)
     cout << endl;
     cizgiCizdir(kacinciKume);
     boslukBirak(tercih);
-    cout << "^^^^^^^^^^";
+    cout << "^^^^^^^^^^^";
     cout << endl;
     siraliDugumleriCizdir(sira, tercih);
 }
@@ -125,7 +125,7 @@ void YoneticiListesi::cizgiCizdir(int kacinciKume)
 
     while (gec != 0 && sayac != 8)
     {
-        cout << "----------  ";
+        cout << "-----------  ";
         gec = gec->sonraki_sld;
         sayac++;
     }
@@ -147,7 +147,7 @@ void YoneticiListesi::adresCizdir(int kacinciKume)
 
     while (gec != 0 && sayac != 8)
     {
-        cout << " " << gec << "   ";
+        cout << " " <<setw(9)<< gec << "   ";
         gec = gec->sonraki_sld;
         sayac++;
     }
@@ -169,7 +169,7 @@ void YoneticiListesi::ortalamaDegerCizdir(int kacinciKume)
 
     while (gec != 0 && sayac != 8)
     {
-        cout << "|" << setw(8) << gec->satirListAdres->ortalamaGetir() << "|  ";
+        cout << "|" << setw(9) << gec->satirListAdres->ortalamaGetir() << "|  ";
 
         gec = gec->sonraki_sld;
         sayac++;
@@ -193,13 +193,13 @@ void YoneticiListesi::oncekiAdresCizdir(int kacinciKume)
     {
         if (gec->onceki_sld == 0)
         {
-            cout << "|"
+            cout << "|"<<setw(9)
                  << "00000000"
                  << "|  ";
         }
         else
         {
-            cout << "|" << gec->onceki_sld << "|  ";
+            cout << "|"<<setw(9) << gec->onceki_sld << "|  ";
         }
 
         gec = gec->sonraki_sld;
@@ -225,12 +225,12 @@ void YoneticiListesi::sonrakiAdresCizdir(int kacinciKume)
     {
         if (gec->sonraki_sld == 0)
         {
-            cout << "|"
+            cout << "|"<<setw(9)
                  << "00000000"
                  << "|  ";
         }
         else
-            cout << "|" << gec->sonraki_sld << "|  ";
+            cout << "|"<<setw(9) << gec->sonraki_sld << "|  ";
         gec = gec->sonraki_sld;
         sayac++;
     }
@@ -239,7 +239,7 @@ void YoneticiListesi::sonrakiAdresCizdir(int kacinciKume)
 void YoneticiListesi::boslukBirak(int sira)
 {
     cout << endl
-         << setw(12 * sira) << "";
+         << setw(13 * sira) << "";
 }
 
 void YoneticiListesi::siraliDugumleriCizdir(int sira, int tercih)
@@ -403,10 +403,10 @@ void YoneticiListesi::bilgilendirmeYazilari(int kacinciKume)
 
     if (gec->sonraki_sld == 0)
     {
-        cout << setw((sayac * 12) + 3) << "SON";
+        cout << setw((sayac * 13) + 3) << "SON";
     }
     else
     {
-        cout << setw((sayac * 12) + 3) << "--->";
+        cout << setw((sayac * 13) + 3) << "--->";
     }
 }

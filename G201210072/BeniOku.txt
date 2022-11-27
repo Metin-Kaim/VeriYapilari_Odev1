@@ -1,3 +1,0 @@
-Program çalıştırıldığında gelen adreslerin basamak uzunluğu 8 olduğunda konsol düzeni dokümanlarda belirtildiği üzere istenildiği şekilde çalışmaktadır fakat bazı zamanlar program
-çalıştırıldığında adresler 9'lu olarak gelmekte ve konsoldaki görüntü kaymaktadır. Bu sorun baş gösterdiğinde programın sonlandırılıp tekrar çalıştırılması gerekmektedir.
-Bu sorunla çok karşılaşılmasada yine de yaşanmaktadır.

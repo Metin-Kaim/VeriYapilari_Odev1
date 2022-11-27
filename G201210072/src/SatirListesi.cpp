@@ -63,27 +63,27 @@ void SatirListesi::d_yazdir(int sira) // satir listesinin dugumlerini yazdirma
         boslukBirakSirali(sira);
         cout << " " << gecici;
         boslukBirakSirali(sira);
-        cout << "----------  ";
+        cout << "-----------  ";
         boslukBirakSirali(sira);
-        cout << "|" << setw(5) << gecici->veri << setw(4) << "|";
+        cout << "|" << setw(6) << gecici->veri << setw(4) << "|";
         if (dugumAdresi == gecici && dugumSecme == true)
         {
             dugumSecme = false;
             cout << "    <----- secilen dugum";
         }
         boslukBirakSirali(sira);
-        cout << "----------  ";
+        cout << "-----------  ";
         boslukBirakSirali(sira);
         if (gecici->sonraki_d == 0)
         {
-            cout << "|"
+            cout << "|"<<setw(9)
                  << "00000000"
                  << "|  ";
         }
         else
-            cout << "|" << gecici->sonraki_d << "|  ";
+            cout << "|" <<setw(9)<< gecici->sonraki_d << "|  ";
         boslukBirakSirali(sira);
-        cout << "----------  \n";
+        cout << "-----------  \n";
 
         gecici = gecici->sonraki_d;
 
@@ -112,7 +112,7 @@ float SatirListesi::ortalamaGetir()
 void SatirListesi::boslukBirakSirali(int sira)
 {
     cout << endl
-         << setw(12 * sira) << "";
+         << setw(13 * sira) << "";
 }
 
 void SatirListesi::rastgeleDugumGetir()
